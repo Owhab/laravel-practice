@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+// use App\Http\Models\Project;
 
 class ProjectController extends Controller
 {
@@ -14,7 +15,11 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $data = Project::all();
+        return view('projects', ['projects' => $data]);
+        // $projects = Project::latest()->get();
+        // return $projects;
+        // return view('projects', [projects => $projects]);
     }
 
     /**

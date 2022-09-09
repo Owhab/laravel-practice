@@ -9,6 +9,26 @@
 <body>
 
     <h1>Projects List</h1>
+    <!-- <p>{{$projects}}</p> -->
+    
+    <table border = "1">
+        <tr>
+            <th>ID </th>
+            <th>Title</th>
+            <th>Desctiption</th>
+            <th>Author</th>
+            <th>Type</th>
+        </tr>
+        @foreach($projects as $project)
+        <tr>
+            <td>{{$project -> id}} </td>
+            <td>{{$project -> title}}</td>
+            <td>{{$project -> description}}</td>
+            <td>{{$project -> author}}</td>
+            <td>{{$project -> type}}</td>
+        </tr>
+        @endforeach
+    </table>
     
     
 </body>
