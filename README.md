@@ -17,3 +17,15 @@ Route::get("/demo",[DemoController::class, 'Index']);
 ``` 
 In this route, The ```Index``` refers the ```Index``` function in the controller
 - From ```Index``` function of ```DemoController.php``` need to view the ```demo.php``` view; 
+
+## Using named routes
+To use first need to add a name to the route. Route naming example: 
+```
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome-page');
+```
+When linking the route we need to use the route name that is defined in the ```web.php``` file like this..
+```
+    <a href= "{{route('welcome-page')}}">Welcome</a>
+```

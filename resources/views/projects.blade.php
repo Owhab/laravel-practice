@@ -29,6 +29,8 @@
         </tr>
         @endforeach
     </table>
+
+    <a href= "{{route('welcome-page')}}">Welcome</a>
     
     
 </body>
