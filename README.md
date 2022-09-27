@@ -29,3 +29,8 @@ When linking the route we need to use the route name that is defined in the ```w
 ```
     <a href= "{{route('welcome-page')}}">Welcome</a>
 ```
+## Creating Controller 
+run this command to the terminal
+````
+php artisan make:controller DemoController
+````
