@@ -46,3 +46,9 @@ Then need to use the controller like this with the method name.
 Route::get("/projects", [ProjectController::class, 'index']);
 
 ````
+
+## Creating Middleware
+run this command to the terminal to create a Middleware
+```
+php artisan make:middleware DemoMiddleware
+```
