@@ -52,3 +52,7 @@ run this command to the terminal to create a Middleware
 ```
 php artisan make:middleware DemoMiddleware
 ```
+after creating a middleware we need to register this middleware to the ```kernel.php``` file with the ```$routeMiddleware``` area like this...
+````
+        'age' => \Illuminate\Auth\Middleware\CheckAge::class,
+````
