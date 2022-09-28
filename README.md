@@ -34,3 +34,15 @@ run this command to the terminal
 ````
 php artisan make:controller DemoController
 ````
+
+### Using controller 
+First need to import the controller in ```web.php``` file like this 
+````
+use App\Http\Controllers\DemoController;
+
+````
+Then need to use the controller like this with the method name.  
+````
+Route::get("/projects", [ProjectController::class, 'index']);
+
+````

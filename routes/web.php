@@ -16,4 +16,4 @@ Route::get('/welcome', function () {
 
 Route::get("/demo", [DemoController::class, 'Index']);
 
-Route::get("/projects", "App\Http\Controllers\ProjectController@index");
+Route::get("/projects", [ProjectController::class, 'index']);
