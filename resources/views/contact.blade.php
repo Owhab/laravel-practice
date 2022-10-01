@@ -36,7 +36,7 @@
         <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/about') }}">About</a></li>
         <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/projects') }}">Projects</a></li>
         <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/blog') }}">Blog</a></li>
-        <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/contact') }}">Contact</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="{{ route('con') }}">Contact</a></li>
     </ul>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, impedit.</p>
     <label for="name">Name: </label>

@@ -16,7 +16,7 @@ Route::get('/about', function () {
 });
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name("con");
 Route::get('/blog', function () {
     return view('blog');
 });

@@ -69,3 +69,17 @@ if($request->age <= 20){
 Route::get("/projects", [ProjectController::class, 'index'])->middleware('age');
 ````
 We can check it by url bar using this ```http://127.0.0.1:8000/projects?age=32```
+
+## Accessing router using router name
+First we need to define a route with route url and name like this. 
+```
+Route::get('/contact', function () {
+    return view('contact');
+})->name("con");
+```
+
+Then we need to call it by using it's name like this 
+```
+        <li class = "menu-item"><a class = "menu-link" href="{{ route('con') }}">Contact</a></li>
+```
+
