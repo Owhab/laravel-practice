@@ -32,11 +32,11 @@
     <h1>Learning Laravel</h1>
     <!-- Design a Menu -->
     <ul class = "menu-list">
-        <li class = "menu-item"><a class = "menu-link" href="/home">Home</a></li>
-        <li class = "menu-item"><a class = "menu-link" href="/about">About</a></li>
-        <li class = "menu-item"><a class = "menu-link" href="/projects">Projects</a></li>
-        <li class = "menu-item"><a class = "menu-link" href="/blog">Blog</a></li>
-        <li class = "menu-item"><a class = "menu-link" href="/contact">Contact</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="{{url('/home')}}">Home</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/about') }}">About</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/projects') }}">Projects</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/blog') }}">Blog</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="{{ URL::to('/contact') }}">Contact</a></li>
     </ul>
     
 </body>
