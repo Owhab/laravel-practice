@@ -57,7 +57,7 @@ after creating a middleware we need to register this middleware to the ```kernel
         'age' => \App\Http\Middleware\CheckAge::class,
 ````
 ### Using Middleware
-We are going to use middleware. In this step we want that if the ```age``` is under 20 it will redirect url to ```home``` route either it will go to ```project``` route. 
+We are going to use middleware. In this step we want that if the ```age``` is under 20 it will redirect url to ```home``` route either it will go to ```projects``` route. 
 ```CheckAge.php```
 ````
 if($request->age <= 20){
@@ -68,3 +68,4 @@ if($request->age <= 20){
 ````
 Route::get("/projects", [ProjectController::class, 'index'])->middleware('age');
 ````
+We can check it by url bar using this ```http://127.0.0.1:8000/projects?age=32```
