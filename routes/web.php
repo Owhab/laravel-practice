@@ -29,3 +29,13 @@ Route::get('/welcome', function () {
 Route::get("/demo", [DemoController::class, 'Index']);
 
 Route::get("/projects", [ProjectController::class, 'index'])->middleware('age');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
