@@ -8,6 +8,9 @@ use App\Http\Controllers\DemoController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    echo('This is Home');
+});
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -16,4 +19,4 @@ Route::get('/welcome', function () {
 
 Route::get("/demo", [DemoController::class, 'Index']);
 
-Route::get("/projects", [ProjectController::class, 'index']);
+Route::get("/projects", [ProjectController::class, 'index'])->middleware('age');

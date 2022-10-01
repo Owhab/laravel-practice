@@ -54,5 +54,17 @@ php artisan make:middleware DemoMiddleware
 ```
 after creating a middleware we need to register this middleware to the ```kernel.php``` file with the ```$routeMiddleware``` area like this...
 ````
-        'age' => \Illuminate\Auth\Middleware\CheckAge::class,
+        'age' => \App\Http\Middleware\CheckAge::class,
+````
+### Using Middleware
+We are going to use middleware. In this step we want that if the ```age``` is under 20 it will redirect url to ```home``` route either it will go to ```project``` route. 
+```CheckAge.php```
+````
+if($request->age <= 20){
+            return redirect("home");
+        }
+````
+```web.php```
+````
+Route::get("/projects", [ProjectController::class, 'index'])->middleware('age');
 ````
