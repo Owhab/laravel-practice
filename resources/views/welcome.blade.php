@@ -5,9 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Laravel</title>
+    <style>
+        .menu-list{
+            list-style: none;
+        }
+        .menu-item{
+            display: inline;
+            padding: 10px;
+            background-color: #8BBCCC;
+
+        }
+        .menu-item:hover{
+            background-color: #31C6D4;
+
+        }
+        .menu-link{
+            text-decoration: none;
+            font-size: 22px;
+            color: #fff;
+        }
+        
+        
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Learning Laravel</h1>
+    <!-- Design a Menu -->
+    <ul class = "menu-list">
+        <li class = "menu-item"><a class = "menu-link" href="/home">Home</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="/about">About</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="/projects">Projects</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="/blog">Blog</a></li>
+        <li class = "menu-item"><a class = "menu-link" href="/contact">Contact</a></li>
+    </ul>
     
 </body>
 </html>
